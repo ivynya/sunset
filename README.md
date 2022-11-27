@@ -18,7 +18,7 @@ Built using Go, Fiber, and Docker, Sunset uses almost no resources and can be ru
 ## How to deploy a Sunset instance
 
 1. Clone this repository
-2. Edit `public/message.md` with appropriate message for useres
+2. Edit `public/message.md` with appropriate message for users
 3. `docker build -t sunset:website .`
 4. `docker run -p 3000:3000 -d sunset:website`
 5. Edit your reverse proxy for your domain to point at `localhost:3000` on your server

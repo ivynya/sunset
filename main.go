@@ -8,7 +8,11 @@ func main() {
 	app.Static("/", "./public")
 
 	app.Get("/*", func(c *fiber.Ctx) error {
-		return c.Redirect("/")
+		if c.Path() != "/" {
+			return c.Redirect("/")
+		} else {
+			return c.SendString("Sunset error")
+		}
 	})
 
 	app.Listen(":3000")
